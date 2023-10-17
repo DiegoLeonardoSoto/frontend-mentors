@@ -12,11 +12,12 @@ const SuccessPage = () => {
 
   return (
     <form
+      autoComplete="off"
       onSubmit={onSubmit}
       className="flex flex-col bg-white  h-screen  sm:h-auto sm:p-16 sm:max-w-lg sm:gap-y-8 sm:rounded-3xl font-roboto justify-around px-8"
     >
       <div className="flex flex-col gap-y-8 sm:gap-y-7">
-        <img className="w-fit" src="../public/assets/images/icon-success.svg" />
+        <img className="w-fit" src="./assets/images/icon-success.svg" />
         <h1 className="text-4xl sm:text-6xl font-bold text-darkSlateGrey">
           Thanks for subscribing!
         </h1>

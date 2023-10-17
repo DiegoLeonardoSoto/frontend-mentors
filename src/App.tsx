@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SignUpPage from './pages/SignUpPage'
 import SuccessPage from './pages/SuccessPage'
+import Attributions from './components/Attributions'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/success" element={<SuccessPage />} />
         </Routes>
       </BrowserRouter>
+      <Attributions />
     </>
   )
 }

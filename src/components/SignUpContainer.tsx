@@ -7,13 +7,13 @@ const SignUpContainer = () => {
       <div className="sm:p-5">
         <img
           className="sm:hidden w-[-webkit-fill-available]"
-          src="../public/assets/images/illustration-sign-up-mobile.svg"
+          src="./assets/images/illustration-sign-up-mobile.svg"
           alt=""
         />
 
         <img
           className="hidden sm:block"
-          src="../public/assets/images/illustration-sign-up-desktop.svg"
+          src="./assets/images/illustration-sign-up-desktop.svg"
           alt=""
         />
       </div>
