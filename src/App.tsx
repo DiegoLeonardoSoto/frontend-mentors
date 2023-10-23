@@ -76,7 +76,7 @@ function App() {
 
             <input
               type="submit"
-              className="sm:relative absolute left-0 right-0 mx-auto bg-offBlack rounded-full p-8 bg-[url('./assets/images/icon-arrow.svg')] w-16 h-16  sm:w-24 sm:h-24 bg-no-repeat bg-center bg-[length:1.5rem_1.5rem] sm:bg-auto hover:bg-purple "
+              className="sm:relative absolute left-0 right-0 mx-auto bg-offBlack rounded-full p-8 bg-[url('./images/icon-arrow.svg')] w-16 h-16  sm:w-24 sm:h-24 bg-no-repeat bg-center bg-[length:1.5rem_1.5rem] sm:bg-auto hover:bg-purple "
               value=" "
             />
           </div>
