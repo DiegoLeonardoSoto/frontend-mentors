@@ -22,8 +22,6 @@ function App() {
   const [year, setYear] = useState<number | string>('--')
 
   const onSubmit = handleSubmit((data) => {
-    console.log(new Date().getUTCFullYear())
-
     const timeDiff =
       new Date().getTime() -
       new Date(data.year, data.month - 1, data.day).getTime()

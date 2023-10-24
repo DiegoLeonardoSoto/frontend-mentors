@@ -7,7 +7,6 @@ export function animation(
     setValue(i)
     ++i
     if (i >= value) {
-      console.log(i)
       clearInterval(interval)
     }
   }, 70)
