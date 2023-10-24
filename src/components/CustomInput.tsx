@@ -28,8 +28,8 @@ const CustomInput = ({ name, register, errorMessage }: Props) => {
         {...register}
         className={
           errorMessage
-            ? 'text-lg sm:text-inputSize font-bold placeholder:text-smokeGrey placeholder:font-bold border border-lightRed p-4 sm:p-6 w-full rounded-xl focus:border-lightRed'
-            : 'text-lg sm:text-inputSize font-bold placeholder:text-smokeGrey placeholder:font-bold border border-lightGrey p-4 sm:p-6 w-full rounded-xl focus:border-purple'
+            ? 'outline-none text-lg sm:text-inputSize font-bold placeholder:text-smokeGrey placeholder:font-bold border border-lightRed p-4 sm:p-6 w-full rounded-xl focus:border-lightRed'
+            : 'outline-none text-lg sm:text-inputSize font-bold placeholder:text-smokeGrey placeholder:font-bold border border-lightGrey p-4 sm:p-6 w-full rounded-xl focus:border-purple'
         }
         type="text"
         placeholder={placeHolderText[name]}

@@ -40,6 +40,7 @@ function App() {
         {/* Form */}
 
         <form
+          autoComplete="off"
           onSubmit={onSubmit}
           className="grid grid-cols-3 gap-x-4 sm:grid-cols-4  sm:gap-x-8"
         >
