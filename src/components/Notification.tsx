@@ -34,9 +34,12 @@ const Notification = ({ notification }: Props) => {
           {' ' + NOTIFICATIONS_TYPE[notification.description.type]}
 
           {notification.description.from && (
-            <span className="font-extrabold hover:cursor-pointer hover:text-primaryBlue">
+            <a
+              href="#"
+              className="font-extrabold hover:cursor-pointer hover:text-primaryBlue"
+            >
               {' ' + notification.description.from}
-            </span>
+            </a>
           )}
 
           {/* readed */}
@@ -50,18 +53,20 @@ const Notification = ({ notification }: Props) => {
 
         {/* message */}
         {notification.description.message && (
-          <p className="p-5 mt-4 border rounded-md text-darkGrayishBlue border-grayishBlue">
+          <a
+            href="#"
+            className="p-5 mt-4 border rounded-md text-darkGrayishBlue border-grayishBlue hover:bg-lightGrayishBlue1 hover:cursor-pointer"
+          >
             {notification.description.message}
-          </p>
+          </a>
         )}
       </div>
 
       {/* Picture */}
       {notification.description.picture && (
-        <img
-          className="w-10 h-10 ml-auto"
-          src={notification.description.picture}
-        />
+        <a href="#" className="ml-auto cursor-pointer">
+          <img className="w-10" src={notification.description.picture} />
+        </a>
       )}
     </div>
   )

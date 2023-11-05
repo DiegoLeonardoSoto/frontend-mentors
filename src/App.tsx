@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <div className="bg-lightGrayishBlue1 h-screen font-plusJakartaSans sm:flex sm:items-center sm:justify-center">
+    <div className="bg-lightGrayishBlue1 min-h-screen font-plusJakartaSans sm:flex sm:items-center sm:justify-center">
       <div className=" bg-white p-4 sm:w-[734px] sm:px-9 sm:pt-9 sm:pb-0 sm:rounded-lg">
         {/* header */}
         <div className="flex justify-between">
