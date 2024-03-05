@@ -1,10 +1,10 @@
+import { Navbar } from './components/Navbar'
+
 function App() {
   return (
-    <>
-      <p className="font-kumbhSans text-base font-bold underline">
-        Hola <span className=" font-extrabold">mundo</span>
-      </p>
-    </>
+    <div className="container mx-auto px-4">
+      <Navbar />
+    </div>
   )
 }
 
