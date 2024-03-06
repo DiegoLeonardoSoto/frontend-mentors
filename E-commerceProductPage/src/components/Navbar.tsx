@@ -12,41 +12,63 @@ export const Navbar = () => {
         </div>
 
         <ul className="md:flex gap-16 text-darkGrayishBlue hidden">
-          <li className="relative">
-            <a href="">Collection</a>
-            <span className="block w-full bg-primaryOrange h-1 absolute bottom-[-3.2rem]"></span>
+          <li>
+            <a
+              className="relative hover:before:block before:w-full before:absolute before:h-1 before:bg-primaryOrange before:bottom-[-3.4rem] before:hidden"
+              href=""
+            >
+              Collection
+            </a>
           </li>
           <li>
-            <a href=""> Men</a>
+            <a
+              className="relative hover:before:block before:w-full before:absolute before:h-1 before:bg-primaryOrange before:bottom-[-3.4rem] before:hidden"
+              href=""
+            >
+              {' '}
+              Men
+            </a>
           </li>
           <li>
-            <a href="">Women</a>
+            <a
+              className="relative hover:before:block before:w-full before:absolute before:h-1 before:bg-primaryOrange before:bottom-[-3.4rem] before:hidden"
+              href=""
+            >
+              Women
+            </a>
           </li>
           <li>
-            <a href="">About</a>
+            <a
+              className="relative hover:before:block before:w-full before:absolute before:h-1 before:bg-primaryOrange before:bottom-[-3.4rem] before:hidden"
+              href=""
+            >
+              About
+            </a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a
+              className="relative hover:before:block before:w-full before:absolute before:h-1 before:bg-primaryOrange before:bottom-[-3.4rem] before:hidden"
+              href=""
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </div>
 
-      <ul className="flex gap-10 items-center">
-        <li>
-          <button>
-            <img src="./images/icon-cart.svg" alt="icon-cart" />
-          </button>
-        </li>
-        <li>
-          <button>
-            <img
-              className="w-7 md:w-14"
-              src="./images/image-avatar.png"
-              alt="image-avatar"
-            />
-          </button>
-        </li>
-      </ul>
+      <div className="flex gap-10 items-center">
+        <button>
+          <img src="./images/icon-cart.svg" alt="icon-cart" />
+        </button>
+
+        <button className=" border-2 rounded-full border-transparent hover:border-primaryOrange">
+          <img
+            className="w-7 md:w-14"
+            src="./images/image-avatar.png"
+            alt="image-avatar"
+          />
+        </button>
+      </div>
     </nav>
   )
 }
