@@ -3,7 +3,7 @@ import { Product } from './components/Product'
 
 function App() {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-16">
       <Navbar />
       <Product />
     </div>

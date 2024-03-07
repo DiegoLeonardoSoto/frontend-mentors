@@ -1,7 +1,7 @@
 export const Navbar = () => {
   return (
     <nav className="flex justify-between items-center py-4 md:py-8 md:border-b-[1px] md:border-grayishBlue">
-      <div className="flex md:gap-16">
+      <div className="flex md:gap-12">
         <div className="flex items-center gap-5">
           <button className="md:hidden">
             <img src="public/images/icon-menu.svg" alt="" />
@@ -11,7 +11,7 @@ export const Navbar = () => {
           </a>
         </div>
 
-        <ul className="md:flex gap-16 text-darkGrayishBlue hidden">
+        <ul className="md:flex gap-8 text-darkGrayishBlue hidden">
           <li>
             <a
               className="relative hover:before:block before:w-full before:absolute before:h-1 before:bg-primaryOrange before:bottom-[-3.4rem] before:hidden"
