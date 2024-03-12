@@ -4,7 +4,7 @@ import { Gallery } from './Gallery'
 export const Product = () => {
   return (
     <div className="flex px-14 mt-24 gap-36 justify-between">
-      <Gallery />
+      <Gallery images={product.images} />
 
       <div className="flex-1 flex flex-col justify-center">
         <h2 className="uppercase text-sm text-primaryOrange font-bold tracking-wider">
