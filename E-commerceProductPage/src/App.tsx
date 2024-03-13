@@ -3,9 +3,11 @@ import { Product } from './components/Product'
 
 function App() {
   return (
-    <div className="container mx-auto px-16">
-      <Navbar />
-      <Product />
+    <div className="flex flex-col items-center">
+      <div className="max-w-5xl h-screen">
+        <Navbar />
+        <Product />
+      </div>
     </div>
   )
 }
