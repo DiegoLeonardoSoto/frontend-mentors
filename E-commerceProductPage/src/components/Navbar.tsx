@@ -1,4 +1,9 @@
+import { useState } from 'react'
+import { Cart } from './Cart'
+
 export const Navbar = () => {
+  const [isActive, setIsActive] = useState(false)
+
   return (
     <nav className="h-20 flex items-center justify-center w-full flex-1">
       <div className="flex w-full justify-between h-full shadow-[0_2px_2px_-2px_rgba(0,0,0,0.2)]">
@@ -26,9 +31,8 @@ export const Navbar = () => {
           </ul>
         </div>
 
-        {/* Cart */}
         <div className="flex gap-8 items-center relative">
-          <button>
+          <button onClick={() => setIsActive((prev) => !prev)}>
             <span className="hidden bg-primaryOrange px-2  text-xs absolute top-6 z-10 rounded-full text-white">
               3
             </span>
@@ -38,20 +42,11 @@ export const Navbar = () => {
               className="hover:brightness-0"
             />
           </button>
-
-          <div className="hidden absolute bg-white top-16 -left-36 z-20 w-80 h-64 shadow-2xl rounded-lg">
-            <p className="text-lg font-bold p-4">Cart</p>
-            <hr />
-            <div className="flex flex-col items-center justify-center h-48 p-4">
-              <p>Your cart is empty</p>
-
-              <button className="w-full bg-primaryOrange p-3 rounded-lg text-white font-bold">
-                Checkout
-              </button>
-            </div>
-          </div>
+          {/* Cart */}
+          <Cart isActive={isActive} />
 
           <img
+            onClick={() => setIsActive((prev) => !prev)}
             className="cursor-pointer w-7 md:w-12 my-4 rounded-full hover:outline hover:outline-2 hover:outline-primaryOrange"
             src="./images/image-avatar.png"
             alt="image-avatar"

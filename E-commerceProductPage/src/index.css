@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.closebutton:hover {
+  filter: sepia(100%) hue-rotate(360deg) saturate(600%) contrast(1);
+}
