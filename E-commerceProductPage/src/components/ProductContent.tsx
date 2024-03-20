@@ -1,3 +1,4 @@
+import { useQuantity } from '../hooks/useQuantity'
 import { TProduct } from '../types/product'
 
 export const ProductContent = ({
@@ -7,6 +8,8 @@ export const ProductContent = ({
   discountPercentage,
   description
 }: TProduct) => {
+  const { quantity, decreseQuantity, increseQuantity } = useQuantity()
+
   return (
     <section className=" ml-12">
       <h2 className="uppercase text-primaryOrange font-bold mb-4">{brand}</h2>
@@ -26,11 +29,11 @@ export const ProductContent = ({
       </p>
       <div className="flex gap-4 mt-6">
         <div className="flex bg-lightGrayishBlue rounded-lg w-56 items-center justify-around">
-          <button className="hover:opacity-50">
+          <button onClick={decreseQuantity} className="hover:opacity-50">
             <img src="../images/icon-minus.svg" alt="" />
           </button>
-          0
-          <button className="hover:opacity-50">
+          {quantity}
+          <button onClick={increseQuantity} className="hover:opacity-50">
             <img src="../images/icon-plus.svg" alt="" />{' '}
           </button>
         </div>

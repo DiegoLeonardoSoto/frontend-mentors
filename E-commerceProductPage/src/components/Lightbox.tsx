@@ -23,7 +23,7 @@ export const Lightbox = () => {
         >
           <img className="w-5 h-5 " src="../images/icon-close.svg" alt="" />
         </button>
-        <Gallery />
+        <Gallery isLightbox={true} />
       </div>
     </div>
   )

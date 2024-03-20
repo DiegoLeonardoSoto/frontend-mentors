@@ -1,46 +1,60 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { images } from '../mock/product.json'
 import {
   LightboxContext,
   LigthboxContextProp
 } from '../context/lightboxContext'
+import { useGallery } from '../hooks/useGallery'
 
-export const Gallery = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+type Props = {
+  isLightbox?: boolean
+}
 
+export const Gallery = ({ isLightbox = false }: Props) => {
+  const { currentIndex, goToSlide, nextSlide, prevSlide } = useGallery()
   const { setShowLightbox } = useContext(LightboxContext) as LigthboxContextProp
-
-  const goToSlide = (id: number): void => {
-    setCurrentIndex(id)
-  }
 
   return (
     <section className="flex flex-col">
-      {/* 
-
-      <div
-        style={{ backgroundImage: `url(${images[currentIndex].img})` }}
-        className=" relative h-56 w- md:h-96 overflow-hidden rounded-xl bg-current bg-cover bg-center duration-500 bg-no-repeat cursor-pointer"
-      >
-        <button className="hidden h-10 w-10 absolute top-[50%] -translate-x-0 translate-y-[-50%]  left-5 rounded-full  bg-white cursor-pointer">
-          <img className="mx-auto" src="../images/icon-previous.svg" alt="" />
+      <div className="relative">
+        <button
+          className={
+            isLightbox
+              ? `bg-white w-12 h-12 flex items-center justify-center rounded-full text-center z-10 absolute top-1/2 -left-6 -mt-6`
+              : ' md:hidden '
+          }
+          onClick={prevSlide}
+        >
+          <img src="../images/icon-previous.svg" alt="" />
+        </button>
+        <button
+          className={
+            isLightbox
+              ? `bg-white w-12 h-12 flex items-center justify-center rounded-full text-center z-10 absolute top-1/2 -right-6 -mt-6`
+              : 'md:hidden'
+          }
+          onClick={nextSlide}
+        >
+          <img src="../images/icon-next.svg" alt="" />
         </button>
 
-        <button className="hidden h-10 w-10 absolute top-[50%] -translate-x-0 translate-y-[-50%]  right-5 rounded-full  bg-white cursor-pointer">
-          <img className="mx-auto" src="../images/icon-next.svg" alt="" />
+        <button onClick={() => setShowLightbox(true)}>
+          <img
+            src={images[currentIndex].img}
+            className={`rounded-xl duration-500 cursor-pointer ${
+              isLightbox ? 'max-w-lg' : 'max-w-md'
+            }`}
+            alt=""
+          />
         </button>
       </div>
-*/}
-      <button onClick={() => setShowLightbox(true)}>
-        <img
-          src={images[currentIndex].img}
-          className="rounded-xl duration-500 cursor-pointer max-w-md"
-          alt=""
-        />
-      </button>
 
       <div>
-        <ul className=" md:flex gap-4 justify-between rtl:space-x-reverse mt-8">
+        <ul
+          className={`md:flex gap-4 ${
+            isLightbox ? 'justify-center' : 'justify-between'
+          } rtl:space-x-reverse mt-8`}
+        >
           {images.map(({ thumbnail }, thumbnailIndex) => (
             <li
               onClick={() => goToSlide(thumbnailIndex)}
