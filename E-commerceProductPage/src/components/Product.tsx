@@ -1,4 +1,4 @@
-import { LightboxProvider } from '../context/LightboxProvider'
+import { LightboxProvider } from '../context/lightboxContext/LightboxProvider'
 import product from '../mock/product.json'
 import { Gallery } from './Gallery'
 import { Lightbox } from './Lightbox'

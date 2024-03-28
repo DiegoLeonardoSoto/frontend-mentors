@@ -3,7 +3,7 @@ import { Gallery } from './Gallery'
 import {
   LightboxContext,
   LigthboxContextProp
-} from '../context/lightboxContext'
+} from '../context/lightboxContext/lightboxContext'
 
 export const Lightbox = () => {
   const { showLightbox, setShowLightbox } = useContext(

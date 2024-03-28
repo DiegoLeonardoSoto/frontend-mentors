@@ -2,8 +2,8 @@ import { useContext } from 'react'
 import { images } from '../mock/product.json'
 import {
   LightboxContext,
-  LigthboxContextProp
-} from '../context/lightboxContext'
+  TLigthboxContextProp
+} from '../context/lightboxContext/lightboxContext'
 import { useGallery } from '../hooks/useGallery'
 
 type Props = {
@@ -12,7 +12,9 @@ type Props = {
 
 export const Gallery = ({ isLightbox = false }: Props) => {
   const { currentIndex, goToSlide, nextSlide, prevSlide } = useGallery()
-  const { setShowLightbox } = useContext(LightboxContext) as LigthboxContextProp
+  const { setShowLightbox } = useContext(
+    LightboxContext
+  ) as TLigthboxContextProp
 
   return (
     <section className="flex flex-col">
